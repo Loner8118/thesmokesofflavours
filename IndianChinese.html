@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="custom.css">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-image: url('IndianChinese.jpg'); /* You can replace this with a more relevant food or restaurant-themed background */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .menu-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 50px auto;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #D35400;
+            margin-bottom: 30px;
+        }
+        .menu-section {
+            margin-bottom: 40px;
+        }
+        .menu-section h2 {
+            color: #E74C3C;
+            border-bottom: 2px solid #E74C3C;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .menu-item h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .menu-item p {
+            margin: 0;
+            font-size: 16px;
+            color: #666;
+        }
+        .price {
+            color: #28B463;
+            font-weight: bold;
+        }
+        .back-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        button {
+            background-color: #28B463;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        button:hover {
+            background-color: #1D8348;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Indian-Chinese Menu</h1>
+
+        <!-- Starters Section -->
+        <div class="menu-section">
+            <h2>Starters</h2>
+            <div class="menu-item">
+                <h3>Spring Rolls</h3>
+                <p class="price">₹80</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chili Paneer</h3>
+                <p class="price">₹150</p>
+            </div>
+            <div class="menu-item">
+                <h3>Veg Manchurian</h3>
+                <p class="price">₹120</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Satay</h3>
+                <p class="price">₹180</p>
+            </div>
+            <div class="menu-item">
+                <h3>Hot and Sour Soup</h3>
+                <p class="price">₹70</p>
+            </div>
+            <div class="menu-item">
+                <h3>Prawn Crackers</h3>
+                <p class="price">₹90</p>
+            </div>
+        </div>
+
+        <!-- Main Course Section -->
+        <div class="menu-section">
+            <h2>Main Course</h2>
+            <div class="menu-item">
+                <h3>Chili Chicken</h3>
+                <p class="price">₹220</p>
+            </div>
+            <div class="menu-item">
+                <h3>Vegetable Fried Rice</h3>
+                <p class="price">₹150</p>
+            </div>
+            <div class="menu-item">
+                <h3>Paneer Fried Rice</h3>
+                <p class="price">₹180</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Hakka Noodles</h3>
+                <p class="price">₹200</p>
+            </div>
+            <div class="menu-item">
+                <h3>Veg Hakka Noodles</h3>
+                <p class="price">₹180</p>
+            </div>
+            <div class="menu-item">
+                <h3>Fish in Black Bean Sauce</h3>
+                <p class="price">₹250</p>
+            </div>
+        </div>
+
+        <!-- Breads Section -->
+        <div class="menu-section">
+            <h2>Breads</h2>
+            <div class="menu-item">
+                <h3>Garlic Naan</h3>
+                <p class="price">₹50</p>
+            </div>
+            <div class="menu-item">
+                <h3>Butter Naan</h3>
+                <p class="price">₹60</p>
+            </div>
+            <div class="menu-item">
+                <h3>Plain Rice</h3>
+                <p class="price">₹30</p>
+            </div>
+            <div class="menu-item">
+                <h3>Fried Rice</h3>
+                <p class="price">₹150</p>
+            </div>
+        </div>
+
+        <!-- Desserts Section -->
+        <div class="menu-section">
+            <h2>Desserts</h2>
+            <div class="menu-item">
+                <h3>Chocolate Spring Rolls</h3>
+                <p class="price">₹90</p>
+            </div>
+            <div class="menu-item">
+                <h3>Gulab Jamun with Ice Cream</h3>
+                <p class="price">₹100</p>
+            </div>
+            <div class="menu-item">
+                <h3>Fruit Salad</h3>
+                <p class="price">₹70</p>
+            </div>
+        </div>
+
+        <!-- Beverages Section -->
+        <div class="menu-section">
+            <h2>Beverages</h2>
+            <div class="menu-item">
+                <h3>Sweet Lime Soda</h3>
+                <p class="price">₹40</p>
+            </div>
+            <div class="menu-item">
+                <h3>Green Tea</h3>
+                <p class="price">₹30</p>
+            </div>
+            <div class="menu-item">
+                <h3>Masala Chai</h3>
+                <p class="price">₹30</p>
+            </div>
+            <div class="menu-item">
+                <h3>Cold Coffee</h3>
+                <p class="price">₹80</p>
+            </div>
+        </div>
+
+        <!-- Return to Main Page Button -->
+        <div class="back-button">
+            <a href="index.html">
+                <button>Back to Homepage</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

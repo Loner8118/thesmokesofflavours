@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="custom.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #000000;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+        /* Header & Navbar */
+        header {
+            background: url('Table3.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+            position:center;
+        }
+        .short-text {
+            font-size: 48px;
+            font-weight: bold;
+            color: #fff;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+            animation: fadeInDown 1s;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0px); }
+        }
+        
+        nav .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo {
+            width: 70px;
+            height: 70px;
+            margin-right: 15px;
+        }
+
+        nav .restaurant-name {
+            font-size: 30px;
+            font-weight: bold;
+            color: #b53d2f;
+        }
+
+        nav .nav-links {
+            list-style: none;
+        }
+
+        nav .nav-links li {
+            margin: 0 15px;
+            display: inline-block;
+        }
+
+        nav .nav-links a {
+            color: #fff;
+            text-decoration: rgb(169, 19, 19);
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav .nav-links a:hover {
+            color: #b53d2f;
+        }
+
+        .dropdown-menu {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .hero {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero .btn {
+            padding: 10px 20px;
+            background: #b53d2f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background: #b53d2f;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 50px 20px;
+            background: #fff;
+            text-align: center;
+            font: italic "Fira Sans", sans-serif;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 50px 20px;
+            background: #fff;
+            text-align: center;
+            font-family: "Arial, Helvetica, sans-serif";
+        }
+
+        .reviews-section h2 {
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .review-item {
+            display: inline-block;
+            width: 30%;
+            margin: 0 1%;
+            background: #b53d2f;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .review-item:hover {
+            transform: scale(1.05);
+        }
+
+        .review-item p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: white;
+            font-style: oblique;
+        }
+
+        .review-item h4 {
+            font-weight: bold;
+            font-style: oblique;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 50px 20px;
+            background: #bcb5b5;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        /* Map Section */
+        .map-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo-section">
+                <img src="logo.png" alt="Restaurant Logo" class="logo">
+                <div class="restaurant-name">THE SMOKES OF FLAVOUR</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="MenuIndian.html">Indian</a></li>
+                        <li><a class="dropdown-item" href="MenuJapanese.html">Japanese</a></li>
+                        <li><a class="dropdown-item" href="MenuContinental.html">Continental</a></li>
+                        <li><a class="dropdown-item" href="IndianChinese.html">Chinese</a></li>
+                    </ul>
+                </li>
+                <li><a href="Table Reservation.html">Table Reservation</a></li>
+                <li><a href="Review.html">Reviews</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>WELCOME TO THE SMOKES OF FLAVOUR</h1>
+            <p class="short-text">Exquisite dining experience in the heart of the city</p>
+            <a href="Table Reservation.html" class="btn">Reserve a Table</a>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>Experience fine dining like never before. Our chefs bring the best from around the world to your plate. Established in 1998, we are known for our modern take on classic dishes, quality service, and elegant ambiance.</p>
+    </section><br>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <h2>What Our Customers Say</h2>
+        <div class="review-item">
+            <p>"Amazing food, perfect atmosphere! Will definitely return!"</p>
+            <h4>- Sameer Mahajan</h4>
+        </div>
+        <div class="review-item">
+            <p>"A five-star dining experience. Highly recommend!"</p>
+            <h4>- John Crasto</h4>
+        </div>
+        <div class="review-item">
+            <p>"The best dining experience I’ve had in a long time."</p>
+            <h4>- Michael Shah</h4>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="map-section">
+        <h2>Our Location</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.105563946!2d76.84700131634273!3d28.647279935391065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd1b8948d02f%3A0x7c00790f7353706f!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001%2C%20India!5e0!3m2!1sen!2sus!4v1694345219941!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>Email: smokesofflavour@gmail.com</p>
+            <p>Phone: +91 12345 67890</p>
+            <p>Address: 123 Connaught Place, Delhi,India</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Smokes of Flavour. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
